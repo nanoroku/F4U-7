@@ -111,7 +111,7 @@ module.exports.createGameMainScene = () =>
         //  BGM再生
         // ====================================================================
         let bgm = scene.assets["flap_away"].play();
-        bgm.changeVolume(0.25);
+        bgm.changeVolume(0.1);
 
         // ====================================================================
         //  背景の生成

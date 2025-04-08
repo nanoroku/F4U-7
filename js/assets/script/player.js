@@ -156,7 +156,8 @@ class Player extends g.Sprite {
         }
         else
         {
-            this.se2.play();
+            let se = this.se2.play();
+            se.changeVolume(0.1);
         }
     }
 
@@ -196,7 +197,8 @@ class Player extends g.Sprite {
     killed()
     {
         this.effect.startEffect(this.x, this.y);
-        this.se.play();
+        let se = this.se.play();
+        se.changeVolume(0.1);
     }
 
     shoot()

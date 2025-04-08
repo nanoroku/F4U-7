@@ -71,7 +71,8 @@ class Enemy extends g.Sprite {
             g.game.vars.gameState.score += this.score;
         }
         else{
-            this.se2.play();
+            let se = this.se2.play();
+            se.changeVolume(0.1);
         }
     }
 
@@ -342,7 +343,8 @@ class Zero1 extends skyEnemy {
     killed()
     {
         this.effect.startEffect(this.x, this.y);
-        this.se.play();
+        let se = this.se.play();
+        se.changeVolume(0.1);
     }
 }
 
@@ -382,7 +384,8 @@ class Zero2 extends skyEnemy {
     killed()
     {
         this.effect.startEffect(this.x, this.y);
-        this.se.play();
+        let se = this.se.play();
+        se.changeVolume(0.1);
     }
 }
 
@@ -434,7 +437,8 @@ class Zero3 extends skyEnemy {
     killed()
     {
         this.effect.startEffect(this.x, this.y);
-        this.se.play();
+        let se = this.se.play();
+        se.changeVolume(0.1);
     }
 }
 
@@ -486,7 +490,8 @@ class Zero4 extends skyEnemy {
     killed()
     {
         this.effect.startEffect(this.x, this.y);
-        this.se.play();
+        let se = this.se.play();
+        se.changeVolume(0.1);
     }
 }
 
@@ -538,7 +543,8 @@ class Zero5 extends skyEnemy {
     killed()
     {
         this.effect.startEffect(this.x, this.y);
-        this.se.play();
+        let se = this.se.play();
+        se.changeVolume(0.1);
     }
 }
 
@@ -578,7 +584,8 @@ class Zero6 extends skyEnemy {
     killed()
     {
         this.effect.startEffect(this.x, this.y);
-        this.se.play();
+        let se = this.se.play();
+        se.changeVolume(0.1);
     }
 }
 
@@ -630,7 +637,8 @@ class Zero7 extends skyEnemy {
     killed()
     {
         this.effect.startEffect(this.x, this.y);
-        this.se.play();
+        let se = this.se.play();
+        se.changeVolume(0.1);
     }
 }
 
@@ -742,23 +750,27 @@ class G3M extends skyEnemy {
             });
         }
         else{
-            this.se2.play();
+            let se = this.se2.play();
+            se.changeVolume(0.1);
         }
     }
 
     killed(onFinish)
     {
         this.effect1.startEffect(this.x - this.width/2.5, this.y - this.height/2.5);
-        this.se.play();
+        let se = this.se.play();
+        se.changeVolume(0.1);
 
         this.scene.setTimeout(() => {
             this.effect2.startEffect(this.x, this.y + this.height/2.5);
-            this.se.play();
+            se = this.se.play();
+            se.changeVolume(0.1);
         }, 100);
 
         this.scene.setTimeout(() => {
             this.effect3.startEffect(this.x + this.width/2.5, this.y - this.height/2.5);
-            this.se.play();
+            se = this.se.play();
+            se.changeVolume(0.1);
 
             // 全てのエフェクトが終わった後に destroy　する
             if (onFinish) onFinish();
@@ -807,23 +819,27 @@ class CV1 extends seaEnemy {
             });
         }
         else{
-            this.se2.play();
+            let se = this.se2.play();
+            se.changeVolume(0.1);
         }
     }
 
     killed(onFinish)
     {
         this.effect1.startEffect(this.x - this.width/3, this.y - this.height/3);
-        this.se.play();
+        let se = this.se.play();
+        se.changeVolume(0.1);
 
         this.scene.setTimeout(() => {
             this.effect2.startEffect(this.x, this.y + this.height/3);
-            this.se.play();
+            se = this.se.play();
+            se.changeVolume(0.1);
         }, 100);
 
         this.scene.setTimeout(() => {
             this.effect3.startEffect(this.x + this.width/3, this.y - this.height/3);
-            this.se.play();
+            se = this.se.play();
+            se.changeVolume(0.1);
 
             // 全てのエフェクトが終わった後に destroy　する
             if (onFinish) onFinish();
@@ -856,7 +872,8 @@ class Destroyer1 extends seaEnemy {
     killed()
     {
         this.effect1.startEffect(this.x, this.y);
-        this.se.play();
+        let se = this.se.play();
+        se.changeVolume(0.1);
     }
 }
 
@@ -996,53 +1013,63 @@ class BattleShip1 extends seaEnemy {
             });
         }
         else{
-            this.se2.play();
+            let se = this.se2.play();
+            se.changeVolume(0.1);
         }
     }
 
     killed(onFinish)
     {
         this.effect1.startEffect(this.x, this.y);
-        this.se.play();
+        let se = this.se.play();
+        se.changeVolume(0.1);
 
         this.scene.setTimeout(() => {
             this.effect2.startEffect(this.x - this.width/3, this.y - this.height/3);
-            this.se.play();
+            se = this.se.play();
+            se.changeVolume(0.1);
         }, 100);
 
         this.scene.setTimeout(() => {
             this.effect3.startEffect(this.x - this.width/3-10, this.y + this.height/3);
-            this.se.play();
+            se = this.se.play();
+            se.changeVolume(0.1);
         }, 200);
 
         this.scene.setTimeout(() => {
             this.effect2.startEffect(this.x - this.width/4, this.y - this.height/3+10);
-            this.se.play();
+            se = this.se.play();
+            se.changeVolume(0.1);
         }, 300);
 
         this.scene.setTimeout(() => {
             this.effect3.startEffect(this.x - this.width/4+10, this.y + this.height/3+10);
-            this.se.play();
+            se = this.se.play();
+            se.changeVolume(0.1);
         }, 400);
 
         this.scene.setTimeout(() => {
             this.effect3.startEffect(this.x + this.width/4-10, this.y - this.height/3);
-            this.se.play();
+            se = this.se.play();
+            se.changeVolume(0.1);
         }, 500);
 
         this.scene.setTimeout(() => {
             this.effect3.startEffect(this.x + this.width/4, this.y + this.height/3);
-            this.se.play();
+            se = this.se.play();
+            se.changeVolume(0.1);
         }, 600);
 
         this.scene.setTimeout(() => {
             this.effect3.startEffect(this.x + this.width/3+10, this.y - this.height/3+10);
-            this.se.play();
+            se = this.se.play();
+            se.changeVolume(0.1);
         }, 700);
 
         this.scene.setTimeout(() => {
             this.effect3.startEffect(this.x + this.width/3, this.y + this.height/3+10);
-            this.se.play();
+            se = this.se.play();
+            se.changeVolume(0.1);
 
             // 全てのエフェクトが終わった後に destroy　する
             if (onFinish) onFinish();

@@ -28,7 +28,7 @@ class AlertObject extends g.Sprite {
             blinkCount++;
 
             let player = this.se.play();
-            player.changeVolume(0.25);
+            player.changeVolume(0.1);
 
             if(blinkCount >= 9) // 1.5秒(9回)点滅で終了
             {
